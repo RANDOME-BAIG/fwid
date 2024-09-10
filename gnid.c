@@ -200,7 +200,7 @@ int main(int argc, char* argv[]){
             }
         }
     }else if(GenID_LoadRegistrationID(regid,100) != -1 && strlen(regid) >= 32){
-        fprintf(stdout,"%s\n",regid);
+        fprintf(stdout,"%s",regid);
         exit(EXIT_SUCCESS);
     }
     exit(EXIT_FAILURE);
@@ -519,7 +519,7 @@ int GenID_DoCheckRegister(const char* _layers2json,const char* _reg_id){
 			curl_err = curl_easy_perform(curl_handle);
 			curl_easy_getinfo(curl_handle, CURLINFO_RESPONSE_CODE, &HTTPcode);
 			if(curl_err == CURLE_OK && HTTPcode == 200){
-                printf("%s\n",_reg_id);
+                		fprintf(stdout,"%s",_reg_id);
 				retcode = 0;
 			}else{
                 fprintf(stdout,"Error While Firewall Registration Verification: %s\n",HTTPData);
