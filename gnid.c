@@ -47,7 +47,7 @@
 #define GNID_ACCESS_TOKEN_FILEPATH "/var/db/tid.db"
 #define GNID_REGISTER_ID_FILEPATH "/var/db/id.db"
 #define GNID_REGISTER_EXPIRE_FILEPATH "/var/db/eid.db"
-#define DEBUG_GENID
+//! #define DEBUG_GENID
 
 
 char* REGID_FILEPATH = NULL;
